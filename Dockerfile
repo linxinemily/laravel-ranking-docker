@@ -5,6 +5,8 @@ RUN apt-get install -y libz-dev && \
     docker-php-ext-enable grpc && \
     curl -sLO http://ftp.tw.debian.org/debian/pool/main/libz/libzip/libzip-dev_1.5.1-4_amd64.deb && \
     curl -sLO http://ftp.tw.debian.org/debian/pool/main/libz/libzip/libzip4_1.5.1-4_amd64.deb && \
+    curl -sLO http://ftp.tw.debian.org/debian/pool/main/o/openssh/openssh-client_7.9p1-10+deb10u1_amd64.deb && \
+    dpkg -i openssh-client_7.9p1-10+deb10u1_amd64.deb && \
     dpkg -i libzip4_1.5.1-4_amd64.deb && \
     dpkg -i libzip-dev_1.5.1-4_amd64.deb && \
     docker-php-ext-install zip && \
